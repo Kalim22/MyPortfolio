@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="portfolio.css">
+    <!-- <link rel="stylesheet" href="./bootstrap.min.css"> -->
+    <title>portfolio</title>
+</head>
+    <body>
+        <div class="progressbar">
+            <div class="bar" id="bar"></div>
+        </div>
+        <div class="nav">
+            <nav class="navbar" id="darknav">
+                <ul class="unorder">
+                    <li class="home"><a href="" id="texth"><svg xmlns="http://www.w3.org/6000/svg" width="50" height="22" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                        <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                      </svg></a></li>
+                    <li><a href="" id="texta">About</a>
+                        <ul class="secondunorder">
+                            <li class="secondlist"><a href="" id="dark">Company</a></li>
+                            <li class="secondlist"><a href="" id="dark">Location</a></li>
+                            <li class="secondlist"><a href="" id="dark">Branches</a></li>
+                            <li class="secondlist"><a href="" id="dark">Contact Us</a>
+                                <ul class="thirdfirstunorder">
+                                    <li class="thirdfirstlist"><a href="">E-mail</a></li>
+                                    <li class="thirdfirstlist"><a href="">Phone Number</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="" id="textc">Career</a>
+                        <ul class="thirdunorder">
+                            <li class="thirdlist"><a href="">Jobs</a>
+                                <ul class="thirdfirstunorder">
+                                    <li class="thirdfirstlist"><a href="">On Going Jobs</a></li>
+                                    <li class="thirdfirstlist"><a href="">Upcoming Jobs</a></li>
+                                    <li class="thirdfirstlist"><a href="">Interviews</a></li>
+                                </ul>
+                            </li>
+                            <li class="thirdlist"><a href="">Internships</a></li>
+                        </ul>
+                    </li>
+                    <li class="right" onclick="show()" id="textsignin">Sign In</li>
+                    <li class="right" onclick="show()" id="textsignup">Sign up</li>
+                </ul>
+                <div class="arrowdown">
+                    <div class="leftarrow" id="textleftarrow"></div>
+                    <div class="rightarrow" id="textrightarrow"></div>
+                </div>
+            </nav>   
+        </div>
+        <div class="slidedown" id="darkarrbtn">
+            <div class="togbtn" id="togbtn">
+                <div class="btn" id="btn" onclick="darktheme()">
+                    <div class="btncircle"></div>
+                </div>
+            </div>
+        </div>
+        <div class="myprofile" id="myprofile">
+            <div class="star" id="star">
+                <img src="./image/star2.png" alt="" class="stars" id="stars">
+                <img src="./image/star.png" alt="" class="stars1" id="stars1">
+            </div>
+            <div class="star2">
+                <img src="./image/star2.png" alt="" class="istar2">
+                <img src="./image/star.png" alt="" class="istars3" id="istars3">
+            </div>
+            <div class="mytext">
+                <h1 class="hello" id="myprofilehello">Hello Everyone,</h1>
+                <h2 class="name" id="myprofilename">Myself Kalim,</h2>
+                <p class="about" id="myprofileabout">I have experienced in HTML5, CSS3, Javascript, jQuery,
+                    Bootstrap and Python.All those things, I learned by myself with the
+                    help of Internet. It's not that, Currently I am learning other things 
+                    to become a better developer.</p>
+            </div>
+            <div class="myphoto" id="myphoto">
+                <div class="inphoto">
+                    <img src="./image/mypics/1.jpg" alt="" class="myimg">
+                </div>
+            </div>
+        </div>
+        <div class="slide" id="darkslideshow">
+            <div class="slideshow">
+                <img src="./image/h.png" alt="" class="imgslide" id="imgslide">
+                <img src="./image/svg/arrow-left-circle.svg" alt="" class="prev" id="prev" onclick="preimg()">
+                <!-- <button class="play" id="play" onclick="auto()">Play</button> -->
+                <img src="./image/svg/arrow-right-circle.svg" alt="" class="next" id="next" onclick="nxtimg()">
+            </div>
+        </div>
+        <div class="login" id="login">
+            <div class="loginpage">
+                <h3 class="loginheading">Login</h3>
+                <label for="Username">username</label>
+                <br>
+                <input type="text" class="username" placeholder="Enter Your username">
+                <br>
+                <label for="password">Password</label>
+                <br>
+                <input type="password" class="password" placeholder="Enter Your Password">
+                <br>
+                <button class="loginbut">Login</button>
+                <button class="loginbut close" onclick="hide()">Close</button>
+                <p class="forget"><a href="">Forget Password</a></p>
+                <p class="dont">Don't have account for login <span class="click"><a href="">Click Here</a></span></p>
+            </div>
+        </div>
+        <div class="card" id="darkcard">
+            <div class="cards">
+                <div class="incard">
+                    <img src="./image/h.png" alt="" class="imcard">
+                </div>
+                <div class="content">
+                    <div class="context">
+                        <h2 class="heading">Skill One</h2>
+                        <p class="para">HTML
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="incard">
+                    <img src="./image/cs.png" alt="" class="imcard">
+                </div>
+                <div class="content">
+                    <div class="context">
+                        <h2 class="heading">Skill Two</h2>
+                        <p class="para">CSS
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="incard">
+                    <img src="./image/js.png" alt="" class="imcard">
+                </div>
+                <div class="content">
+                    <div class="context">
+                        <h2 class="heading">Skill Three</h2>
+                        <p class="para">Javascript
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="incard">
+                    <img src="./image/b.jpeg" alt="" class="imcard">
+                </div>
+                <div class="content">
+                    <div class="context">
+                        <h2 class="heading">Skill Four</h2>
+                        <p class="para">Bootstrap
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="incard">
+                    <img src="./image/jq.png" alt="" class="imcard">
+                </div>
+                <div class="content">
+                    <div class="context">
+                        <h2 class="heading">Skill Five</h2>
+                        <p class="para">jQuery
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="incard">
+                    <img src="./image/p.png" alt="" class="imcard">
+                </div>
+                <div class="content">
+                    <div class="context">
+                        <h2 class="heading">Skill Six</h2>
+                        <p class="para">Python
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="social" id="social">
+            <div class="iconsoc">
+                <img src="./image/svg/facebook.svg" alt="" class="icon fb">
+                <img src="./image/svg/instagram.svg" alt="" class="icon instagram">
+                <img src="./image/svg/twitter.svg" alt="" class="icon twitter">
+                <img src="./image/svg/linkedin.svg" alt="" class="icon linkedin">
+                <img src="./image/svg/github.svg" alt="" class="icon github">
+                <img src="./image/svg/youtube.svg" alt="" class="icon youtube">
+                <img src="./image/svg/whatsapp.svg" alt="" class="icon whatsapp">
+                <!-- <div class="icons fb">
+                    <img src="./image/svg/facebook.svg" alt="" class="icon f">
+                </div>
+                <div class="icons instagram">
+                    <img src="./image/svg/instagram.svg" alt="" class="icon instagram">
+                </div>
+                <div class="icons twitter">
+                    <img src="./image/svg/twitter.svg" alt="" class="icon twitter">
+                </div>
+                <div class="icons linkedin">
+                    <img src="./image/svg/linkedin.svg" alt="" class="icon linkedin">
+                </div>
+                <div class="icons github">
+                    <img src="./image/svg/github.svg" alt="" class="icon github">
+                </div>
+                <div class="icons">
+                    <img src="./image/svg/youtube.svg" alt="" class="icon youtube">
+                </div>
+                <div class="icons">
+                    <img src="./image/svg/whatsapp.svg" alt="" class="icon whatsapp">
+                </div> -->
+            </div>
+        </footer>
+        <script type="text/javascript" src="../myportfolio/portfolio.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".right").click(function(){
+                    $(".login").toggle();
+                });
+            });
+
+            $(document).ready(function(){
+                $(".loginbut").click(function(){
+                    $(".login").hide();
+                });
+            });
+
+            $(document).ready(function(){
+                $(".arrowdown").click(function(){
+                    $(".slidedown").slideToggle(1000);
+                })
+            })
+
+            var star = $(".star");
+            for(var i = 0; i < 1000; i++){
+                $(document).ready(function(){
+                    $("body").mouseenter(function(){
+                        star.animate({left:'1100px',top:'100px',},6000)
+                        star.animate({left:'150px', top:'-100px'},6000)
+                        star.animate({left:"100px",top:'100px'},6000)
+                        star.animate({left:'1000px', top:'-100px'},6000)
+                        star.animate({left:'160px',top:'90px'},6000)
+                    });
+                });
+            };
+            var star2 = $(".star2");
+            for(var j = 0; j < 1000; j++){
+                $(document).ready(function(){
+                    $("body").mouseenter(function(){
+                        star2.animate({left:'0px',top:'-100px'},6000)
+                        star2.animate({left:'400px',top:'100px'},6000)
+                        star2.animate({left:'570px',top:'-100px'},6000)
+                        star2.animate({left:'200px',top:'100px'},6000)
+                        star2.animate({left:'900px',top:'80px'},6000)
+                    })
+                })
+            }
+
+            $(document).ready(function(){
+                $(".btn").click(function(){
+                    $(".stars1").toggle();
+                });
+            });
+
+            $(document).ready(function(){
+                $(".btn").click(function(){
+                    $(".istars3").toggle();
+                });
+            });
+        </script>
+    </body>
+</html>
